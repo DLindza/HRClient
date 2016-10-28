@@ -1,0 +1,44 @@
+<form>
+
+
+  <div>
+    <marquee>
+      <strong>
+        <p id = "todaysdate"></p>
+
+          <script>
+            var d = new Date();
+            document.getElementById("todaysdate").innerHTML = d.toDateString();
+          </script>
+      </strong>
+    </marquee>
+
+  </div>
+
+  <div class="form-group">
+    <label for="exampleUsername">Username</label>
+    <input type="text" class="form-control" ng-model="timecard.userName" id="exampleUsername" placeholder="Username">
+  </div>
+
+  <div class="form-group">
+    <label for="timeIn">Time In</label>
+    <input type='text' class="form-control" ng-model="timecard.startTime" id="timeIn"/>
+  </div>
+
+  <div class="form-group">
+    <label for="timeOut">Time Out</label>
+    <input type='text' class="form-control" ng-model="timecard.endTime" id="timeOut"/>
+  </div>
+
+  <!-- <div class="form-group">
+    <label for="punchDate">Date</label>
+    <input type='date' class="form-control" ng-model="timecard.punchDate" id="punchDate" readonly />
+      <script>
+        document.getElementById('punchDate').valueAsDate = new Date();
+      </script>
+  </div> -->
+
+  <button type="submit" ng-click="save(timecard)" class="btn btn-primary">Submit</button>
+  <hr>
+</form>
+<pre>timeCards = {{timeCards | json}}</pre>
