@@ -10,6 +10,10 @@ body {
   background: url(https://www.clipartsgram.com/image/768813995-slider2bg.jpg);
 }
 
+marquee{
+  background-color: transparent;
+}
+
 table {
    font-family: arial, sans-serif;
    border-collapse: collapse;
@@ -23,7 +27,7 @@ td, th {
 }
 
 tr:nth-child(even) {
-   background-color: #dddddd ;
+   background-color: #62b0bc ;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -62,6 +66,7 @@ tr:nth-child(even) {
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
+  background-color: transparent;
 }
 .jumbotron .btn {
   font-size: 21px;

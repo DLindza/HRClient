@@ -52,5 +52,6 @@ angular.module('hrclientPortalApp')
      $scope.save = function(timecard){
        console.log(timecard);
        TimeCardService.save(timecard);
+       alert("Timecard saved");
      }
   });
