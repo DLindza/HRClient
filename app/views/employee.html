@@ -1,8 +1,31 @@
 <form>
   <div class="form-group">
     <label for="exampleUsername">Username</label>
-    <input type="text" class="form-control" ng-model="timecard.userName" id="exampleUsername" placeholder="Username">
+    <input type="text" class="form-control" ng-model="username" id="exampleUsername" placeholder="Username">
   </div>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary" ng-click="show()">Submit</button>
+  <hr>
+  <table width = 100%>
+    <tr>
+      <th>Employee Name</th>
+      <th>Date</th>
+      <th>Time In</th>
+      <th>Time Out</th>
+    </tr>
+    <div class="timecards">
+
+      <!-- <p>{{timecard.date}}</p> -->
+
+    <tr ng-repeat="timecard in timecards">
+      <td>{{timecard.userName}}</td>
+      <td>{{timecard.date}}</td>
+      <td>{{timecard.startTime}}</td>
+      <td>{{timecard.endTime}}</td>
+    </tr>
+
+  </div>
+
+
+  </table>
 </form>

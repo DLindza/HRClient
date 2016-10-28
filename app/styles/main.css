@@ -7,6 +7,23 @@
 
 body {
   padding: 0;
+  background: url(https://www.clipartsgram.com/image/768813995-slider2bg.jpg);
+}
+
+table {
+   font-family: arial, sans-serif;
+   border-collapse: collapse;
+   width: 100%;
+}
+
+td, th {
+   border: 1px solid #dddddd ;
+   text-align: left;
+   padding: 8px;
+}
+
+tr:nth-child(even) {
+   background-color: #dddddd ;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */

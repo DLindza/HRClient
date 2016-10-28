@@ -1,12 +1,14 @@
 'use strict';
 
 angular.module('hrclientPortalApp')
-  .controller('EmployeeCtrl', function ($scope){
+  .controller('EmployeeCtrl', function ($scope, $http, EmployeeService){
     $scope.employee = {
        "userName":''
      };
 
-     //$scope.timeCards = TimeCardService.async;
+
+
+     $scope.employees = EmployeeService.async;
 
     //  $scope.$watch('employees', function(employees){
     //    if(angular.isDefined(employees.then)){
@@ -29,6 +31,17 @@ angular.module('hrclientPortalApp')
     //    };
     //  });
 
+    $scope.show = function () {
+      $http({
+              method:'GET',
+              url: 'http://localhost:8080/hrtimecards/search/findByUserName?username=' + $scope.username
+          }).
+          then( function (response) {
+            $scope.timecards = response.data._embedded.timecards;
+            console.log(response.data._embedded.timecards);
+            EmployeeService.setUser($scope.username);
+          })
+    };
 
     //  $scope.save = function(timecard){
     //    console.log(timecard);
